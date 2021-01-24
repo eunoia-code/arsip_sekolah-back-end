@@ -15,6 +15,10 @@ class SuratKeluar extends Migration
 					'type'           => 'VARCHAR',
 					'constraint'     => '100',
 			],
+			'perihal'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '20',
+			],
 			'tujuan'       => [
 					'type'           => 'VARCHAR',
 					'constraint'     => '100',
@@ -27,13 +31,13 @@ class SuratKeluar extends Migration
 					'type'           => 'DATE',
 					'null'			 => true,
 			], 
-			'id_referensi'       => [
+			'tempat'       => [
 				'type'           => 'VARCHAR',
-				'constraint'	 => '50',
+				'constraint'	 => '20',
 			],
-			'nomor_agenda'       => [
+			'waktu'       => [
 				'type'           => 'VARCHAR',
-				'constraint'	 => '3',
+				'constraint'	 => '20',
 			],
 			'user'       => [
 					'type'           => 'VARCHAR',

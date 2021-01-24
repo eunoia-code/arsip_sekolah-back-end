@@ -38,6 +38,9 @@ class SuratKeluar extends ResourceController
                 $post = $this->model->insert([
                     'id_surat_keluar'   => uniqid(),
                     'nomor_surat'       => $json->nomor_surat,
+                    'perihal'           => $json->perihal,
+                    'tempat'            => $json->tempat,
+                    'waktu'            => $json->waktu,
                     'tujuan'            => $json->tujuan,
                     'isi_surat'         => $json->isi_surat,
                     'tanggal_surat'     => $date,
@@ -53,6 +56,9 @@ class SuratKeluar extends ResourceController
                 $post = $this->model->insert([
                     'id_surat_keluar'   => uniqid(),
                     'nomor_surat'       => $this->request->getPost('nomor_surat'),
+                    'perihal'           => $this->request->getPost('perihal'),
+                    'tempat'            => $this->request->getPost('tempat'),
+                    'waktu'             => $this->request->getPost('waktu'),
                     'tujuan'            => $this->request->getPost('tujuan'),
                     'isi_surat'         => $this->request->getPost('isi_surat'),
                     'tanggal_surat'     => $date,

@@ -37,6 +37,7 @@ $routes->resource('api/disposisi', ['controller' => 'Disposisi']);
 $routes->resource('api/surat_keluar', ['controller' => 'SuratKeluar']);
 $routes->resource('api/referensi', ['controller' => 'Referensi']);
 $routes->resource('api/user', ['controller' => 'User']);
+$routes->resource('api/nomor', ['controller' => 'NomorSurat']);
 
 $routes->get('/api/countData/referensiCount', 'countData::referensiCount');
 $routes->get('/api/countData/suratMasukCount', 'countData::suratMasukCount');

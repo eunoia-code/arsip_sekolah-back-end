@@ -9,6 +9,9 @@ class SuratKeluarModel extends Model
     protected $allowedFields = [
         'id_surat_keluar',
         'nomor_surat',
+        'perihal',
+        'tempat',
+        'waktu',
         'tujuan',
         'isi_surat',
         'tanggal_surat',

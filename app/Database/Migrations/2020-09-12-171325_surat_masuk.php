@@ -26,14 +26,6 @@ class SuratMasuk extends Migration
 			'tanggal_surat'       => [
 					'type'           => 'DATE',
 					'null'			 => true,
-			], 
-			'id_referensi'       => [
-				'type'           => 'VARCHAR',
-				'constraint'	 => '50',
-			],
-			'nomor_agenda'       => [
-				'type'           => 'VARCHAR',
-				'constraint'	 => '3',
 			],
 			'user'       => [
 					'type'           => 'VARCHAR',
