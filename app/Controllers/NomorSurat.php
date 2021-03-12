@@ -34,14 +34,11 @@ class NomorSurat extends ResourceController
             if($this->request->getJSON()) {
             
                 $json = $this->request->getJSON();
-                
-                $post->update($json->id, [
-                    'title'     => $json->title,
-                    'content'   => $json->content
+                $post->update($id, [
+                    'nomor_agenda'     => $json->nomor_agenda
                 ]);
-
             } else {
-
+                
                 //get request from PostMan and more
                 $data = $this->request->getRawInput();
                 $post->update($id, $data);

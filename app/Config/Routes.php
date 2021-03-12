@@ -39,6 +39,9 @@ $routes->resource('api/referensi', ['controller' => 'Referensi']);
 $routes->resource('api/user', ['controller' => 'User']);
 $routes->resource('api/nomor', ['controller' => 'NomorSurat']);
 
+$routes->add('api/surat_masuk/update/(:any)', 'SuratMasuk::update');
+$routes->add('api/surat_keluar/update/(:any)', 'SuratKeluar::update');
+
 $routes->get('/api/countData/referensiCount', 'countData::referensiCount');
 $routes->get('/api/countData/suratMasukCount', 'countData::suratMasukCount');
 $routes->get('/api/countData/suratKeluarCount', 'countData::suratKeluarCount');

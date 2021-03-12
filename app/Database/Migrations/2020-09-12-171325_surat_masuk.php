@@ -27,6 +27,11 @@ class SuratMasuk extends Migration
 					'type'           => 'DATE',
 					'null'			 => true,
 			],
+			'file'       => [
+				'type'           => 'TEXT',
+				'constraint'	 => '100',
+				'null'			 => true,
+			],
 			'user'       => [
 					'type'           => 'VARCHAR',
 					'constraint'	 => '100',

@@ -12,6 +12,7 @@ class SuratMasukModel extends Model
         'asal_surat',
         'isi_surat',
         'tanggal_surat',
+        'file',
         'user'
     ];
 }

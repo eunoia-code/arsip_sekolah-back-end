@@ -15,6 +15,7 @@ class SuratKeluarModel extends Model
         'tujuan',
         'isi_surat',
         'tanggal_surat',
+        'file',
         'user'
     ];
 }
