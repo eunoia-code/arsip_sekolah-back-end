@@ -16,4 +16,12 @@ class DisposisiModel extends Model
         'id_surat_masuk',
         'user'
     ];
+
+    public function getDataDisposisiDetail($id) {
+        $query = $this->db->table('disposisi d');
+        $query->select('*');        
+        $query->join('surat_masuk', 'surat_masuk.id_surat_masuk = d.id_surat_masuk');
+        $query->where('d.tujuan', $id);
+        return $query->get();
+    }
 }

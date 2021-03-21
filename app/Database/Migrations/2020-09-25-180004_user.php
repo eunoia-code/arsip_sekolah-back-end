@@ -15,9 +15,17 @@ class User extends Migration
 					'type'           => 'VARCHAR',
 					'constraint'     => '100',
 			],
+			'name'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '100',
+			],
 			'password' => [
 					'type'           => 'VARCHAR',
 					'constraint'     => '100',
+			],
+			'level' => [
+				'type'           => 'INT',
+				'constraint'     => '2',
 			]
 		]);
 		$this->forge->addKey('id_user', true);

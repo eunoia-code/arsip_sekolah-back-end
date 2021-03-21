@@ -19,7 +19,7 @@ class Disposisi extends ResourceController
         return $this->respond([
             'statusCode' => 200,
             'message'    => 'OK',
-            'data'       => $this->model->find($id)
+            'data'       => $this->model->getDataDisposisiDetail($id)->getResult()
         ], 200);
     }
 
@@ -39,10 +39,11 @@ class Disposisi extends ResourceController
                     'id_disposisi'      => uniqid(),
                     'tujuan'            => $json->tujuan,
                     'isi_disposisi'     => $json->isi_disposisi,
+                    'catatan'           => $json->catatan,
                     'sifat'             => $json->sifat,
                     'batas_waktu'       => $date,
                     'id_surat_masuk'    => $json->id_surat_masuk,
-                    'user'              => 'admin'
+                    'user'              => $json->id_user
                 ]);
 
             } else {
@@ -56,9 +57,10 @@ class Disposisi extends ResourceController
                     'tujuan'            => $this->request->getPost('tujuan'),
                     'isi_disposisi'     => $this->request->getPost('isi_disposisi'),
                     'sifat'             => $this->request->getPost('sifat'),
+                    'catatan'             => $this->request->getPost('catatan'),
                     'batas_waktu'       => $date,
                     'id_surat_masuk'    => $this->request->getPost('id_surat_masuk'),
-                    'user'              => 'admin'
+                    'user'              => $this->request->getPost('id_user')
                 ]);
 
             }

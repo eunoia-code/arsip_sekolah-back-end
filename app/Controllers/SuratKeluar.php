@@ -55,7 +55,7 @@ class SuratKeluar extends ResourceController
                     'isi_surat'         => $this->request->getVar('isi_surat'),
                     'file'              => $namafile,
                     'tanggal_surat'     => $date,
-                    'user'              => 'admin'
+                    'user'              => $this->request->getVar('id_user')
 			];
             
 			$this->model->insert($data);
@@ -100,7 +100,7 @@ class SuratKeluar extends ResourceController
                 'isi_surat'         => $this->request->getVar('isi_surat'),
                 'tanggal_surat'     => $date,
 				'file' => $namafile,
-                'user' => 'admin'
+                $this->request->getVar('id_user')
 			];
 
             $post->update($id, $data);

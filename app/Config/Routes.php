@@ -47,6 +47,8 @@ $routes->get('/api/countData/suratMasukCount', 'countData::suratMasukCount');
 $routes->get('/api/countData/suratKeluarCount', 'countData::suratKeluarCount');
 $routes->get('/api/countData/disposisiCount', 'countData::disposisiCount');
 $routes->post('/api/login', 'user::checkLogin');
+$routes->post('/api/getUserList/(:any)', 'user::getUserList');
+// $routes->post('/api/userSession/login', 'UserSession::login');
 
 // $routes->get('api/surat_masuk/new',             'SuratMasuk::new');
 // $routes->post('api/surat_masuk',                'SuratMasuk::create');

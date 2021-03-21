@@ -54,7 +54,7 @@ class SuratMasuk extends ResourceController
 				'asal_surat' => $this->request->getVar('asal_surat'),
 				'tanggal_surat' => $date,
 				'file' => $namafile,
-                'user' => 'admin'
+                'user'              => $this->request->getVar('id_user')
 			];
             
 			$this->model->insert($data);
@@ -97,7 +97,7 @@ class SuratMasuk extends ResourceController
 				'asal_surat' => $this->request->getVar('asal_surat'),
 				'tanggal_surat' => $date,
 				'file' => $namafile,
-                'user' => 'admin'
+                'user'              => $this->request->getVar('id_user')
 			];
 
             $post->update($id, $data);
